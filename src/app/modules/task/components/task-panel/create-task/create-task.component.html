@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">New Task</h3>
+    </div>
+    <div class="card-body">
+        <form (submit)="submitTask()" [formGroup]="fgTask">
+            <div class="row">
+                <div class="mb-3 col-12">
+                    <label class="form-label">Task</label>
+                    <input formControlName="title" type="text" class="form-control">
+                </div>  
+                <div class="mb-3 col-12">
+                    <label class="form-label">Description</label>
+                    <textarea formControlName="description" type="text" class="form-control"></textarea>
+                </div>
+                <div class="mb-3 col-12">
+                    <label class="form-label">Status</label>
+                    <select formControlName="status" type="text" class="form-select">
+                        <ng-container *ngFor="let status of statusList">
+                            <option class="custom-option" [value]="status">{{status}}</option>
+                        </ng-container>
+                    </select>
+                </div>                              
+            </div>
+            <div class="row">
+                <div class="mb-3 col-3">
+                    <input [disabled]="!fgTask.valid" class="btn btn-primary w-100" value="Register" type="submit">
+                </div>
+            </div>                
+        </form>
+    </div>
+</div>

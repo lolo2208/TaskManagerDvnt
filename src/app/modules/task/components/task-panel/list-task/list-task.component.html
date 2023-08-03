@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="task-list-container p-5">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">To do list</h3>
+        </div>
+        <div class="card-body">
+            <button type="button" class="btn btn-primary my-3 px-5" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+                Add Task
+            </button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col-8">Task Name</th>
+                        <th scope="col-3">Description</th>
+                        <th scope="col-1">Reg. Date</th>
+                        <th scope="col-1">Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let task of taskList">
+                        <td (click)="sendTaskData(task)" [ngClass]="getTaskStatusClass(task)">{{task.title}}</td>
+                        <td (click)="sendTaskData(task)" [ngClass]="getTaskStatusClass(task)">{{task.description}}</td>
+                        <td class="text-center" (click)="sendTaskData(task)" [ngClass]="getTaskStatusClass(task)">{{task.dateReg | date:'dd/MM/yyyy'}}</td>
+                        <td class="text-center" (click)="sendTaskData(task)" [ngClass]="getTaskStatusClass(task)">{{task.status}}</td>
+                        <td>
+                            <button class="btn btn-success mx-2" (click)="completeTask(task)">Complete</button>
+                            <button class="btn btn-warning" (click)="inProgressTask(task)">In Progress</button>
+                            <button class="btn btn-danger mx-2" (click)="deleteTask(task)">Delete</button>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>            
+            <div class="modal-body">
+                <app-create-task (taskSubmitted)="handleSubmitTask($event)"></app-create-task>
+            </div>            
+        </div>
+    </div>
+</div>

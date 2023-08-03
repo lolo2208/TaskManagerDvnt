@@ -1,0 +1,49 @@
+.task-detail-container{
+    width: 50%;
+    margin: auto;
+    height: 40%;
+}
+
+.green-card .card-header{
+    background-color: green;
+    color: #FFFFFF;
+}
+
+.green-card .card-body{
+    background-color: rgb(82, 201, 82);
+}
+
+.green-card .list-group .list-group-item{
+    background-color: rgb(82, 201, 82);
+}
+
+.green-card .card-footer{
+    background-color: rgb(82, 201, 82);
+}
+
+.green-card .card-footer button{
+    background-color: #FFFFFF;
+    color: green;
+}
+
+.orange-card .card-header{
+    background-color: orange;
+    color: #FFFFFF;
+}
+
+.orange-card .card-body{
+    background-color: rgb(237, 193, 112);
+}
+
+.orange-card .list-group .list-group-item{
+    background-color: rgb(237, 193, 112);
+}
+
+.orange-card .card-footer{
+    background-color: rgb(237, 193, 112);
+}
+
+.orange-card .card-footer button{
+    background-color: #FFFFFF;
+    color: orange;
+}

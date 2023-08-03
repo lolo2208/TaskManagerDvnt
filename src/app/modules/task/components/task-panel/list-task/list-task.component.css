@@ -1,0 +1,28 @@
+td{
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+th{
+    text-align: center;
+}
+
+tr:hover td{
+    background-color: whitesmoke;
+}
+
+.task-list-container{
+    width: 100%;
+}
+
+.completed-task{
+    color: green;
+}
+
+.in-progress-task{
+    color: orange;
+}
+
+.pending-task{
+    color: black;
+}

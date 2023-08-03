@@ -1,0 +1,24 @@
+[
+    {
+        "id": "3",
+        "title": "Do exercise",
+        "description": "I have to exercise for 30 minutes",
+        "dateReg": "Wed Aug 02 2023 00:00:00 GMT-0500 (hora estándar de Perú)",
+        "status": "Completed"
+    },
+    {
+        "id": "2",
+        "title": "Workteam meeting",
+        "description": "Work metting at 15:30",
+        "dateReg": "Mon Jul 31 2023 00:00:00 GMT-0500 (hora estándar de Perú)",
+        "status": "In Progress"
+    },
+    {
+        "id": "1",
+        "title": "Web Apps Develope Project",
+        "description": "Develope activity user view of tickets app - Kotlin",
+        "dateReg": "Sun Jul 30 2023 00:00:00 GMT-0500 (hora estándar de Perú)",
+        "status": "Pending"
+    }
+
+]
